@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">หน้าแรก</a>
+    <form action="/submit-form" method="post">
+        <label for="username">ชื่อผู้ใช้</label>
+        <input type="text" name="username" placeholder="ชื่อผู้ใช้" required><br>
+        <label for="password">รหัสผ่าน</label>
+        <input type="password" name="password" placeholder="รหัสผ่าน" required><br>
+        <label for="age">อายุ</label>
+        <input type="number" name="age" placeholder="อายุ" required min="18" max="60"><br>
+        <label for="email">อีเมล</label>
+        <input type="email" name="email" placeholder="อีเมล" required><br>
+        <label for="date">วันที่สมัครสมาชิก</label>
+        <input type="datetime-local" name="date" required><br>
+        <input type="checkbox" name="subscribe" id="subscribe">
+        <label for="subscribe">สมัครรับจดหมายข่าว</label><br>
+        <input type="radio" name="gender" value="male" id="male">
+        <label for="male">ชาย</label>
+        <input type="radio" name="gender" value="female" id="female">
+        <label for="female">หญิง</label><br>
+        <label for="message">ข้อความของคุณ</label>
+        <textarea name="message" rows="4" cols="50" placeholder="ข้อความของคุณ" required></textarea><br>
+        <label for="country">ประเทศ</label>
+        <select name="country" required>
+            <option value="th">ไทย</option>
+            <option value="us">สหรัฐอเมริกา</option>
+            <option value="jp">ญี่ปุ่น</option>
+        </select>
+        <button type="submit">ส่งข้อมูล</button>
+        <button type="reset">รีเซ็ต</button>
+
+    </form>
+</body>
+</html>
